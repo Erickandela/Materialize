@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo left">LOGO</a>
+          <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Inicio 1</a></li>
+            <li><a href="index.html">Inicio 2</a></li>
+            <li><a href="index.html">Inicio 3</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#">one</a></li>
+      <li><a href="#">two</a></li>
+      <li><a href="#">three</a></li>
+    </ul>
+    <ul class="sidenav" id="mobile">
+      <li><a href="index.html">Inicio 1</a></li>
+      <li><a href="index.html">Inicio 2</a></li>
+      <li><a href="index.html">Inicio 3</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    let sidenav = document.querySelectorAll('.sidenav');
+    let instancia_sidenav = M.Sidenav.init(sidenav,{});
+    let dropdowns = document.querySelectorAll('.dropdown-trigger');
+    let instancia_dropwdown = M.Dropdown.init(dropdowns, {
+    hover:false});
+  });
+    </script>
+  </body>
+</html>
